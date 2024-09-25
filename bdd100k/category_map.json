@@ -1,0 +1,202 @@
+{
+    "car": {
+        "name": "汽车",
+        "id": 1
+    },
+    "bus": {
+        "name": "公交车",
+        "id": 2
+    },
+    "person": {
+        "name": "行人",
+        "id": 3
+    },
+    "bike": {
+        "name": "自行车",
+        "id": 4
+    },
+    "truck": {
+        "name": "卡车",
+        "id": 5
+    },
+    "motor": {
+        "name": "摩托车",
+        "id": 6
+    },
+    "train": {
+        "name": "火车",
+        "id": 7
+    },
+    "rider": {
+        "name": "骑手",
+        "id": 8
+    },
+    "traffic sign": {
+        "name": "交通标志",
+        "id": 9
+    },
+    "traffic sign/green": {
+        "name": "绿色交通标志",
+        "id": 10
+    },
+    "traffic sign/red": {
+        "name": "红色交通标志",
+        "id": 11
+    },
+    "traffic sign/yellow": {
+        "name": "黄色交通标志",
+        "id": 12
+    },
+    "traffic sign/none": {
+        "name": "未知的交通标志",
+        "id": 13
+    },
+    "traffic light": {
+        "name": "交通灯",
+        "id": 14
+    },
+    "traffic light/green": {
+        "name": "绿色交通灯",
+        "id": 15
+    },
+    "traffic light/red": {
+        "name": "红色交通灯",
+        "id": 16
+    },
+    "traffic light/yellow": {
+        "name": "黄色交通灯",
+        "id": 17
+    },
+    "traffic light/none": {
+        "name": "未知的交通灯",
+        "id": 18
+    },
+    "lane/crosswalk": {
+        "name": "人行横道",
+        "id": 19
+    },
+    "lane/road curb": {
+        "name": "路缘石",
+        "id": 20
+    },
+    "lane/single yellow": {
+        "name": "黄色的单车道线",
+        "id": 21
+    },
+    "lane/single white": {
+        "name": "白色的单车道线",
+        "id": 22
+    },
+    "lane/single other": {
+        "name": "其他的单车道",
+        "id": 23
+    },
+    "lane/double yellow": {
+        "name": "黄色的双车道线",
+        "id": 24
+    },
+    "lane/double white": {
+        "name": "白色的双车道线",
+        "id": 25
+    },
+    "lane/double other": {
+        "name": "其他的双车道线",
+        "id": 26
+    },
+    "area/drivable": {
+        "name": "可行驶区域",
+        "id": 27
+    },
+    "area/alternative": {
+        "name": "替代区域",
+        "id": 28
+    },
+    "area/unknown": {
+        "name": "未知区域",
+        "id": 29
+    },
+    "weather": {
+        "name": "天气",
+        "id": 30
+    },
+    "weather/overcast": {
+        "name": "阴天",
+        "id": 31
+    },
+    "weather/clear": {
+        "name": "晴朗",
+        "id": 32
+    },
+    "weather/undefined": {
+        "name": "未知的天气",
+        "id": 33
+    },
+    "weather/snowy": {
+        "name": "下雪",
+        "id": 34
+    },
+    "weather/partly cloudy": {
+        "name": "多云",
+        "id": 35
+    },
+    "weather/rainy": {
+        "name": "有雨",
+        "id": 36
+    },
+    "weather/foggy": {
+        "name": "有雾",
+        "id": 37
+    },
+    "scene": {
+        "name": "场景",
+        "id": 38
+    },
+    "scene/city street": {
+        "name": "城市街道",
+        "id": 39
+    },
+    "scene/highway": {
+        "name": "高速公路",
+        "id": 40
+    },
+    "scene/residential": {
+        "name": "住宅区",
+        "id": 41
+    },
+    "scene/undefined": {
+        "name": "未定义的场景",
+        "id": 42
+    },
+    "scene/parking lot": {
+        "name": "停车场",
+        "id": 43
+    },
+    "scene/tunnel": {
+        "name": "隧道",
+        "id": 44
+    },
+    "scene/gas stations": {
+        "name": "加油站",
+        "id": 45
+    },
+    "timeofday": {
+        "name": "时间",
+        "id": 46
+    },
+    "timeofday/night": {
+        "name": "夜晚",
+        "id": 47
+    },
+    "timeofday/daytime": {
+        "name": "白天",
+        "id": 48
+    },
+    "timeofday/dawn/dusk": {
+        "name": "黎明/黄昏",
+        "id": 49
+    },
+    "timeofday/undefined": {
+        "name": "未定的义时间",
+        "id": 50
+    }
+}
