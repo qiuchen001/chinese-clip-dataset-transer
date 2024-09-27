@@ -2,6 +2,7 @@ import json
 import base64
 from io import BytesIO
 from PIL import Image
+import os
 
 jsonl_src_path = r"E:\playground\ai\datasets\Flickr30k-CN\train_texts.jsonl"
 jsonl_dst_path = r"E:\playground\ai\datasets\custom-cn-clip-datasets\train_texts.jsonl"
@@ -10,10 +11,14 @@ tsv_src_path = r"E:\playground\ai\datasets\Flickr30k-CN\train_imgs.tsv"
 tsv_dst_path = r"E:\playground\ai\datasets\custom-cn-clip-datasets\train_imgs.tsv"
 
 
-def show_image(image_b64_str, image_name):
+def save_image(image_b64_str, image_name):
     img = Image.open(BytesIO(base64.urlsafe_b64decode(image_b64_str)))
     # img.show()
-    img.save(f"./images/{image_name}.png")
+
+    dst_dir = r"E:\playground\ai\datasets\custom-cn-clip-datasets\images"
+
+    dst_image_path = os.path.join(dst_dir, f"{image_name}.png")
+    img.save(dst_image_path)
 
 
 def read_tsv(file_path, seek_id, text):
@@ -21,7 +26,7 @@ def read_tsv(file_path, seek_id, text):
         for line in file:
             pair_list = line.split('\t')
             if int(pair_list[0]) == seek_id:
-                show_image(pair_list[1], text)
+                save_image(pair_list[1], text)
 
                 write_tsv(tsv_dst_path, line)
 
@@ -39,7 +44,8 @@ def read_jsonl(file_path):
             if len(text) > 50:
                 continue
 
-            if "交通灯" in text or "汽车" in text:
+            if "人行横道" in text:
+            # if "交通灯" in text or "汽车" in text:
             # if "公交车" in text or "行人" in text or "路口" in text or "自行车" in text:
                 print(text)
                 write_jsonl(jsonl_dst_path, line)
