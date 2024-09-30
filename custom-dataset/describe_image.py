@@ -78,17 +78,21 @@ class DescribeImage:
         夜晚
         白天
         黎明或黄昏
-        未定义的时间
+        未定义的时间。
+        另外需要特别注意的是：你是一个助手，我将会提供一份标注员标注的关键词，你在描述时可以参考这些关键词
         """
         self.image_base64_str = image_base64_str
 
-    def get_describe(self):
+    def get_describe(self, keyword=None):
         PROMPT_MESSAGES = [
             {
                 "role": "user",
-                "content": [self.prompt, {
-                    "image": self.image_base64_str
-                }],
+                "content":
+                    [
+                        f"{self.prompt}\n\nkeywords: {' '.join(keyword)}",
+                        # self.prompt,
+                        {"image": self.image_base64_str}
+                    ],
             },
         ]
         params = {
