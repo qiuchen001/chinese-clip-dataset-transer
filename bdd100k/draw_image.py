@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from PIL import Image
 
+
 def draw_image(image_labels_file_path, image_file_path, draw_image_path):
     # 示例JSON数据
     with open(image_labels_file_path, 'r') as f:
@@ -35,6 +36,9 @@ def draw_image(image_labels_file_path, image_file_path, draw_image_path):
                 ax.add_patch(rect)
 
                 # 添加类别标签
+                if obj['category'] == 'traffic light' and obj['attributes']['trafficLightColor'] != 'none':
+                    obj['category'] = "{}_{}".format(obj['category'], obj['attributes']['trafficLightColor'])
+
                 ax.text(x1, y1, obj['category'], color='r', fontsize=8)
 
                 # 切出目标框并保存为新的图片
@@ -49,6 +53,7 @@ def draw_image(image_labels_file_path, image_file_path, draw_image_path):
     # 显示图形
     plt.show()
 
+
 def crop_image(image_file_path, x1, y1, x2, y2, category):
     # 加载图片
     image = Image.open(image_file_path)
@@ -62,6 +67,7 @@ def crop_image(image_file_path, x1, y1, x2, y2, category):
     # 保存切出的图片
     cropped_image.save(cropped_image_path)
     print(f"Saved cropped image: {cropped_image_path}")
+
 
 if __name__ == "__main__":
     image_labels_file_path = r"E:\playground\ai\datasets\0000f77c-6257be58.json"
