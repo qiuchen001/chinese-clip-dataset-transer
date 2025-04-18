@@ -150,6 +150,7 @@ def main(src_dir, dst_dir, split):
                         "image_ids": [imageId],
                     }
 
+                    # 另存为图片，图片名称为图片的最终的描述（方便直观查看大模型生成的描述）
                     save_image_by_desc(imageId, new_txt)
 
                     json.dump(imageCNClipJson, f, ensure_ascii=False)
@@ -157,11 +158,7 @@ def main(src_dir, dst_dir, split):
 
 
 if __name__ == '__main__':
-    # srcDir = r'E:\playground\ai\datasets\bdd100k\bdd100k_labels\bdd100k\labels\100k\train'
-    # dstDir = r'E:\playground\ai\datasets\bdd100kLabelsToCNClipTag'
-    # split = 'train'
-    # main(srcDir, dstDir, split)
-
+    # 从bdd100k的图片标签中，过滤出特定的标签，把这些标签，输入给大模型作为参考，输出AI优化后的图片描述
     split_map = [
         {
             "base_name": "train",
